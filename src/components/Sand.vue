@@ -23,18 +23,33 @@ import StrippedButton from "./layers/StrippedButton.vue";
       completely dynamic and given from the outside, maybe it shouldn't be the
       responsibility of this layer to orchestrate it.
     </div>
+    <!-- The props on the input layer are controlled, this is something to consider. You can also pass all
+     attributes through to the underlying input, but maybe filter off classes, the point of the layer
+     is to have strictness of layout. So be wary of that if the business logic requires passthrough. Maybe
+     the classes that make the input look like its designed can be kept separate and the classes being passed
+     through can be added on to the list of classes. -->
     <PrimaryInput placeholder="Please enter your password" type="password">
+      <!-- If you want to replace the default show/hide label, you do it with the #button named slot and just add whichever layers are needed for the new label -->
       <template #button="buttonProps">
+        <!-- ScaleOnClick is a cool readable and lowly coupled way to add a simple or advanced animation and transition logic and styling to a component stack -->
         <ScaleOnClick>
           <StrippedButton v-if="buttonProps.showPassword">🤫</StrippedButton>
           <StrippedButton v-else>👁️</StrippedButton>
         </ScaleOnClick>
       </template>
     </PrimaryInput>
-    <ErrorLabel :textMessage="'some error message from the reactive form variable'">
+    <!-- The label can come from whatever reactive stuff controls the logic and payload of some form -->
+    <ErrorLabel
+      :textMessage="'some error message from the reactive form variable'"
+    >
     </ErrorLabel>
-    <PrimaryInput placeholder="Please enter your email" type="text"></PrimaryInput>
-    <ErrorLabel :textMessage="'some error message from the reactive form variable'">
+    <PrimaryInput
+      placeholder="Please enter your email"
+      type="text"
+    ></PrimaryInput>
+    <ErrorLabel
+      :textMessage="'some error message from the reactive form variable'"
+    >
     </ErrorLabel>
   </main>
 </template>
