@@ -23,6 +23,10 @@ import StrippedButton from "./layers/StrippedButton.vue";
       completely dynamic and given from the outside, maybe it shouldn't be the
       responsibility of this layer to orchestrate it.
     </div>
+    <div class="pb-5">
+      TODO Whatever reactive variable the input is bound to, needs to be able to
+      passthrough from the composing component.
+    </div>
     <!-- The props on the input layer are controlled, this is something to consider. You can also pass all
      attributes through to the underlying input, but maybe filter off classes, the point of the layer
      is to have strictness of layout. So be wary of that if the business logic requires passthrough. Maybe
