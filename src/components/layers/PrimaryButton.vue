@@ -2,17 +2,9 @@
 </script>
 
 <template>
-  <div class="">
+  <div class="btn btn-primary">
     <slot></slot>
   </div>
 </template>
 
-<style scoped>
-div {
-    cursor: pointer;
-}
-
-.text-white {
-    color: white;
-}
-</style>
+<style scoped></style>
