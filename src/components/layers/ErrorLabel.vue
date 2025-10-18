@@ -8,15 +8,12 @@ defineProps({
 </script>
 
 <template>
-  <div class="text-red pl-2 text-sm pb-3 pt-1">
+  <div class="text-base-content/60 flex items-center gap-2 px-1 pt-1 text-[0.6875rem]">
     <slot name="start"></slot>
-    {{textMessage}}
+    <span class="status status-error inline-block"></span>
+    {{ textMessage }}
     <slot name="end"></slot>
   </div>
 </template>
 
-<style scoped>
-.text-red {
-  color: red;
-}
-</style>
+<style scoped></style>
