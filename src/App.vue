@@ -39,15 +39,15 @@ header {
 }
 
 header div {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 header div a {
-    padding: .5rem;
+  padding: .5rem;
 }
 
 main {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
