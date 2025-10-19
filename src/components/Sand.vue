@@ -22,6 +22,7 @@ import FitText from "./layers/FitText.vue";
 
 const range = ref(50);
 const timelineHighlights = reactive({});
+const fitTextTitle = ref("This is a title to test the FitText component");
 const fitTextHeight = ref(500);
 const fitTextMax = ref(68);
 const fitTextMin = ref(8);
@@ -91,7 +92,8 @@ const handleSettingsClick = () => {
             Test of the FitText component
           </template>
           <Card>
-            <template #header>Allowed height</template>
+            <template #header>Fit text</template>
+            Title <input type="string" v-model="fitTextTitle"/>
             Height ({{ Number(fitTextHeight) }}px)
             <RangeIndicator v-model="fitTextHeight" max="1000" min="50"></RangeIndicator>
             Min ({{ Number(fitTextMin) }}px)
@@ -100,7 +102,7 @@ const handleSettingsClick = () => {
             <RangeIndicator v-model="fitTextMax" max="100" min="8"></RangeIndicator>
           </Card>
           <FitText :style="{ height: fitTextHeight + 'px' }" @update:fontSize="fontSize = $event" :max="Number(fitTextMax)" :min="Number(fitTextMin)">
-            <div class="text-l">This is a test title that we want to fit inside the square of this card</div>
+            <div class="text-l">{{ fitTextTitle }}</div>
           </FitText>
           <p class="text-sm text-gray-500 mt-1">
             Font size: {{ fontSize }}px
