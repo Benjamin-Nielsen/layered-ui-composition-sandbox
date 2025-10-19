@@ -9,6 +9,6 @@
 
 <style scoped>
 div:active {
-    scale: .95;
+  scale: .95;
 }
 </style>

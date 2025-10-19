@@ -18,9 +18,14 @@ import Box from "./icons/Box.vue";
 import Letter from "./icons/Letter.vue";
 import SlidingToggles from "./icons/SlidingToggles.vue";
 import { getDaisyUiLink } from "../functions/getDaisyUiLink.js";
+import FitText from "./layers/FitText.vue";
 
 const range = ref(50);
 const timelineHighlights = reactive({});
+const fitTextHeight = ref(500);
+const fitTextMax = ref(68);
+const fitTextMin = ref(8);
+const fontSize = ref(0);
 
 const handleSettingsClick = () => {
   console.log("Clicked settings!");
@@ -38,7 +43,6 @@ const handleSettingsClick = () => {
           DaisyUI Template
         </a>
       </span>
-      <div>TODO Make a text FitText component</div>
       <div>TODO Make an FlowGridComponent</div>
     </Card>
     <div
@@ -80,6 +84,29 @@ const handleSettingsClick = () => {
               <PrimaryButton>Submit</PrimaryButton>
             </ScaleOnClick>
           </button>
+        </Card>
+        <Card>
+          <template #header>
+            <PenAndPaper></PenAndPaper>
+            Test of the FitText component
+          </template>
+          <Card>
+            <template #header>Allowed height</template>
+            Height ({{ Number(fitTextHeight) }}px)
+            <RangeIndicator v-model="fitTextHeight" max="1000" min="50"></RangeIndicator>
+            Min ({{ Number(fitTextMin) }}px)
+            <RangeIndicator v-model="fitTextMin" max="100" min="8"></RangeIndicator>
+            Max ({{ Number(fitTextMax) }}px)
+            <RangeIndicator v-model="fitTextMax" max="100" min="8"></RangeIndicator>
+          </Card>
+          <FitText :style="{ height: fitTextHeight + 'px' }" @update:fontSize="fontSize = $event" :max="Number(fitTextMax)" :min="Number(fitTextMin)">
+            <div class="text-l">This is a test title that we want to fit inside the square of this card</div>
+          </FitText>
+          <p class="text-sm text-gray-500 mt-1">
+            Font size: {{ fontSize }}px
+          </p>
+          <div>Min: {{ fitTextMin }}px</div>
+          <div>Max: {{ fitTextMax }}px</div>
         </Card>
       </div>
       <div class="flex flex-col gap-4">
