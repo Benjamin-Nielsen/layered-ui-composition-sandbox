@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Checkmark from '../icons/Checkmark.vue';
+import Checkmark from '../../icons/Checkmark.vue';
 
 </script>
 

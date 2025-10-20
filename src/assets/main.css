@@ -1,6 +1,42 @@
 @import "tailwindcss";
 @plugin "daisyui";
 @plugin "daisyui/theme" {
+  name: "Borslike";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(0.900 0.022 54.3);
+  --color-base-200: #faeae0;
+  --color-base-300: rgba(0,0,0,.04);
+  --color-base-content: #000;
+  --color-primary: #db3d7f;
+  --color-primary-content: oklch(98% 0.001 106.423);
+  --color-secondary: oklch(55% 0.288 302.321);
+  --color-secondary-content: oklch(97% 0.014 308.299);
+  --color-accent: oklch(43% 0 0);
+  --color-accent-content: oklch(98% 0 0);
+  --color-neutral: oklch(43% 0 0);
+  --color-neutral-content: oklch(98% 0 0);
+  --color-info: oklch(58% 0.158 241.966);
+  --color-info-content: oklch(97% 0.013 236.62);
+  --color-success: oklch(64% 0.2 131.684);
+  --color-success-content: oklch(98% 0.031 120.757);
+  --color-warning: oklch(68% 0.162 75.834);
+  --color-warning-content: oklch(98% 0.026 102.212);
+  --color-error: oklch(57% 0.245 27.325);
+  --color-error-content: oklch(97% 0.013 17.38);
+  --radius-selector: 1rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0rem;
+  --size-selector: 0.3125rem;
+  --size-field: 0.3125rem;
+  --border: 2px;
+  --depth: 0;
+  --noise: 0;
+}
+
+
+/* @plugin "daisyui/theme" {
   name: "pureshimmer";
   default: true;
   prefersdark: true;
@@ -33,7 +69,7 @@
   --border: 1px;
   --depth: 0;
   --noise: 0;
-}
+} */
 /* 
 @plugin "daisyui/theme" {
   name: "abyss";
