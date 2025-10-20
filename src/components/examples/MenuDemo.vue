@@ -23,7 +23,7 @@ const handleSettingsClick = () => {
                     Databases
                 </span>
                 <template #right>
-                    <span class="badge justify-self-end text-sm">7</span>
+                    <span class="badge badge-neutral justify-self-end badge-sm">7</span>
                 </template>
                 </MenuItem>
             </a>
@@ -42,7 +42,7 @@ const handleSettingsClick = () => {
                 </template>
                 Messages
                 <template #right>
-                    <span class="badge justify-self-end">29</span>
+                    <span class="badge badge-warning justify-self-end badge-sm">29</span>
                 </template>
                 </MenuItem>
             </a>
