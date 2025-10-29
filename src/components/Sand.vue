@@ -9,6 +9,7 @@ import PostDemo from "./examples/PostDemo.vue";
 import TimelineDemo from "./examples/TimelineDemo.vue";
 import FormDemo from "./examples/FormDemo.vue";
 import RangeIndicatorDemo from "./examples/RangeIndicatorDemo.vue";
+import TabsDemo from "./examples/TabsDemo.vue";
 
 const range = ref(50);
 
@@ -23,8 +24,8 @@ const range = ref(50);
       <div class="flex flex-col gap-2">
         <a v-for="(link, i) in getDaisyUiLinks()" :href="link">
           <span class="flex gap-1 align-items-center">
-        <PenAndPaper></PenAndPaper>DaisyUI Template {{ i + 1 }}
-      </span>
+            <PenAndPaper></PenAndPaper>DaisyUI Template {{ i + 1 }}
+          </span>
         </a>
       </div>
       <div>TODO Make a FlowGridComponent</div>
@@ -43,6 +44,7 @@ const range = ref(50);
       </div>
       <div class="flex flex-col gap-4">
         <MenuDemo></MenuDemo>
+        <TabsDemo></TabsDemo>
       </div>
     </div>
   </main>
