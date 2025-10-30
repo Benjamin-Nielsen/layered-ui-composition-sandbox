@@ -10,6 +10,7 @@ import TimelineDemo from "./examples/TimelineDemo.vue";
 import FormDemo from "./examples/FormDemo.vue";
 import RangeIndicatorDemo from "./examples/RangeIndicatorDemo.vue";
 import TabsDemo from "./examples/TabsDemo.vue";
+import Timeline from "./layers/buildingBlocks/Timeline.vue";
 
 const range = ref(50);
 
@@ -28,8 +29,10 @@ const range = ref(50);
           </span>
         </a>
       </div>
-      <div>TODO Make a FlowGridComponent</div>
-      <div>TODO Reuse components in the various demos</div>
+      <Timeline>
+        <div>TODO Make a FlowGridComponent</div>
+        <div>TODO Reuse components in the various demos</div>
+      </Timeline>
     </Card>
     <div
       class="text-base-content mx-auto grid grid-cols-1 xs:grid-cols-1 gap-6 pb-20 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 [&>*]:mb-6">
