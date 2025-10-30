@@ -47,6 +47,9 @@ const range = ref(50);
         <TabsDemo></TabsDemo>
       </div>
     </div>
+    <div>
+      <TabsDemo uniqueName="testSecondTabs"></TabsDemo>
+    </div>
   </main>
 </template>
 
